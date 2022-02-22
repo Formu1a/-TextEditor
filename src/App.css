@@ -1,38 +1,182 @@
+.Post textarea,
+.Post input {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+}
+
+.Post input:focus {
+    background-color: #0084ff;
+    color: white;
+    text-align: center;
+}
+.Post textarea:focus {
+    background-color: #0084ff;
+    color: white;
+}
+
+.Post .someText,
+.Post .searchTag {
+    margin: 20px;
+    background-color: #89a3eb;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.Post .save,
+.Post .tagButton {
+    background: #0084ff;
+    border: none;
+    font-size: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.Post .tagButton:hover {
+    background: #0011ff;
+    border: none;
+    font-size: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: white;
+    box-shadow: 0px 0px 30px rgb(80, 1, 117);
+}
+.Post .save:hover {
+    background: #0011ff;
+    border: none;
+    font-size: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: white;
+    box-shadow: 0px 0px 30px rgb(80, 1, 117);
+}
+
+.Post .listBox .notes,
+.Post .containerNote .tags {
+    border: 1px solid silver;
+    box-shadow: 0px 0px 50px rgb(209, 116, 252);
+    border-radius: 5px;
+    background-color: #89a3eb;
+}
+
+.Post .listBox,
+.Post .containerNote {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 35px;
+    flex-wrap: wrap;
+}
+
+body {
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    justify-content: center;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0);
+    max-width: 1000px;
+    min-height: 900px;
+}
+
 .App {
-  text-align: center;
+    padding: 30px;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Post .someText {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Post textarea {
+    flex-basis: 80%;
+    overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Post .save {
+    margin-top: 20px;
+    height: 50px;
+    flex-basis: 10%;
 }
 
-.App-link {
-  color: #61dafb;
+.Post .searchTag {
+    flex-basis: 70%;
+    display: inline-block;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Post .tagButton {
+    flex-direction: column;
+    justify-content: center;
+    max-height: 30px;
+    margin: 1rem 20px 0px 0px;
+    color: black;
+}
+
+.Post .listBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-position: inside;
+    list-style-type: upper-roman;
+}
+.Post .listBox .notes {
+    margin: 20px;
+    padding: 20px;
+}
+.Post .listBox .notes .someNote {
+    flex-grow: 1;
+}
+.Post .listBox .notes .delNote {
+    margin: 40px 10px 0px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+}
+.Post .listBox .notes .changeNote {
+    margin: 40px 10px 0px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+}
+.Post .listBox .notes .delNote:hover {
+    margin: 40px 10px 0px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ff0000;
+    box-shadow: 0px 0px 30px red;
+}
+.Post .listBox .notes .changeNote:hover {
+    margin: 40px 10px 0px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #00ff15;
+    box-shadow: 0px 0px 30px #00ff15;
+}
+
+.Post .containerNote {
+    display: inline-flex;
+    flex-direction: row;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+.Post .containerNote .tags {
+    padding: 10px;
+    margin: 3px;
+}
+.Post .containerNote .delTag {
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #1e90ff;
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        background-color: #a3ddf0;
+    }
 }
